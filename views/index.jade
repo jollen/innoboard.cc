@@ -1,4 +1,4 @@
-extends layouts/default
+extends unsplash/layout/default
 
 block fb_meta
   meta(property='og:site_name', content='PartJS')
@@ -11,14 +11,157 @@ block head
   title #{projectName}
 
 block neck
-  link(rel='stylesheet', href='/views/index.min.css?#{cacheBreaker}')
+  //- Common
+  link(href='#{cdnServer}/vendor/fullpage/jquery.fullPage.css', rel='stylesheet')
+
+  //- App
+  link(href='#{cdnServer}/views/unsplash/examples.css', rel='stylesheet')
+
+block feet
+  //- Common
+  script(src='#{cdnServer}/vendor/jquery/dist/jquery.min.js')
+  script(src='#{cdnServer}/vendor/jqueryui/jquery-ui.min.js')
+  script(src='#{cdnServer}/vendor/fullpage/jquery.fullPage.min.js')
+  script(src='#{cdnServer}/vendor/screenfull/dist/screenfull.min.js')
+
+  //- App
+  script(src='#{cdnServer}/views/unsplash/examples.js')
+
+block heading
 
 block body
-  section#landing
-    img.background-attach(src='/images/gallery/mac-glasses.jpg')
-    .row
-      .col-md-8
-        div.pull-right(style='background: #fcfcfc; padding: 30px 90px 60px 30px; opacity: 0.8; filter: alpha(opacity=80); margin-top: -450px;')
-          h1(style='font-size:58px;') PartJS
-          p
-            | A single-page application boilerplate suite that can be reused in new applications.
+  div#fullpage
+
+    div.section#section-gradient-0
+      h1 Mokoversity 農場計畫
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | Pre-Start 的訓練場
+          li
+            span.fa.fa-mail-reply 
+            | 經營自已的黃金四小時
+    div.section#section-gradient-0
+      h1 黃金四小時
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | 八點到十二點下班時間、充電自學 Coding
+          li 
+            span.fa.fa-circle
+            | 一個創業的形式、全民寫程式時代
+          li 
+            span.fa.fa-circle
+            | 典範：Instagram 的創辦人 Kevin
+
+
+    div.section#section-gradient-2
+      h1 進行形式
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | 每期 3 個月
+          li 
+            span.fa.fa-mail-reply
+            | Stage ABC
+          li 
+            span.fa.fa-circle
+            | 規劃 12 週的成長課程
+
+    div.section#section-gradient-2
+      h1 Stage ABC
+      div#slideList
+        ul
+          li 
+            span.fa.fa-mail-reply
+            | Stage A：Weekly 課程（以及進度 Demo）
+          li 
+            span.fa.fa-mail-reply
+            | Stage B：DropYours.Codes Hackathon
+          li 
+            span.fa.fa-mail-reply
+            | Stage C：Pitch Deck
+
+    div.section#section-gradient-0
+      h1 Stage A：Weekly 課程
+      div#slideList
+        ul
+          li
+            span.fa.fa-circle
+            | 第 1 週： Behavior-Driven Development
+          li
+            span.fa.fa-circle
+            | 第 2 週： Entrepreneur Mindset
+          li
+            span.fa.fa-circle
+            | 第 3 週： Boilerplate and Prototyping
+          li
+            span.fa.fa-circle
+            | 第 4 週： 股權設計
+          li
+            span.fa.fa-circle
+            | 第 5 週： Execution & Strategy Planning
+          li
+            span.fa.fa-circle
+            | 第 6 週： SPA Design Principles
+          li
+            span.fa.fa-circle
+            | 第 7 週： How to Build Great Pitch
+          li
+            span.fa.fa-circle
+            | 第 8 週： Social Media Marketing
+          li
+            span.fa.fa-circle
+            | 第 9 週： How to Target Market
+          li
+            span.fa.fa-circle
+            | 第 10 週： How to Raise Money
+          li
+            span.fa.fa-circle
+            | 第 11 週： How to Startup a Startup
+          li
+            span.fa.fa-circle
+            | 第 12 週： Global Startup
+
+    div.section#section-gradient-0
+      h1 Stage B：DropYours.Codes Hackathon
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | 完成 Prototype
+          li
+            span.fa.fa-circle
+            | 交朋友、找 Co-founder
+
+    div.section#section-gradient-0
+      h1 Stage C：Pitch Deck
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | 第一次的創意想法簡報
+          li
+            span.fa.fa-circle
+            | 對向是天使投資人
+
+    div.section#section-gradient-2
+      h1 如何參加
+      div#slideList
+        ul
+          li 
+            span.fa.fa-circle
+            | 經由農場啟動前會議、現場報名參與
+          li
+            span.fa.fa-circle
+            | 訪問官方網站，留下您的 Email，我們將會邀請您參與會議
+          li
+            span.fa.fa-circle
+            | https://www.mokoversity.com/farm/zh-tw
+          li
+            span.fa.fa-circle
+            | 連絡窗口：contact@mokoversity.com
+

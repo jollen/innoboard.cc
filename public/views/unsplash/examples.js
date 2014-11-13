@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage();
+	$('#fullpage').fullpage({
+		scrollingSpeed: 600
+	});
 
 	//- $(document).on('touchstart scroll click', function() {
 	//- 	if (screenfull.enabled) {

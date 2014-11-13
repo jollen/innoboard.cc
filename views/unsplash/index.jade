@@ -1,7 +1,14 @@
-extends ./layout/fullPage
+extends ./layout/default
 
+block fb_meta
+  meta(property='og:site_name', content='PartJS')
+  meta(property='og:title', content='Full Stack Boilerplates')
+  meta(property='og:url', content='#{currentURL("")}')
+  meta(property='og:image', content='')
+  meta(property='article:published_time', content='')
+  
 block head
-  title #{projectTitle}
+  title #{projectName}
 
 block neck
   //- Common
@@ -28,6 +35,11 @@ block body
     div.section#section-background-fixed-0
       .block-0
         h1 Koyto
+      .options-menu
+        p.options
+          span.fa.fa-expand
+          | Full Screen
+
     div.section#section-background-fixed-5
 
     div.section#section-background-fixed-4

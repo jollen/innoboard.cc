@@ -107,7 +107,7 @@ app.configure(function(){
 
   // partjs configs
   app.use(function(req, res, next) {
-    res.locals.cdnServer = 'http://cdn.innoboard.cc';
+    res.locals.cdnServer = ''; //http://cdn.innoboard.cc
     next();
   });
 

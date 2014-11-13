@@ -69,8 +69,9 @@ p{
 	margin: 0 auto;
 	font-size: 1.5em;
 }
-.section{
-	text-align:center;
+.section {
+	text-align: left;
+	padding: 1%;
 }
 #menu li {
 	display:inline-block;
@@ -250,10 +251,75 @@ h1{
 	padding:0;
 }
 
-.intro p{
+.intro p {
 	color: #fff;
 }
 
+/* ul li
+/* --------------------------------------- */
+#slideList {
+	padding: 20px;
+	float: left;
+	text-align:left;
+}
+#slideList ul {
+	padding: 0;
+	color: #fff;
+	font-size: 1.5em;
+}
+#slideList ul li {
+	display: block;
+	margin: 25px 0;
+}
+#slideList ul li a {
+	color: #BDBDBD;
+	margin:0;
+}
+#slideList ul li a:hover {
+	color: #f2f2f2;
+}
+
+.fa {
+	margin-right: 15px;
+}
+
+/* menu layer
+/* --------------------------------------- */
+
+.options-menu {
+	width: 40%;
+	height: auto;
+    display: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.options-menu p {
+	color: #fff;
+	font-size: 1.2em;
+	position: absolute;
+	bottom: 30px; 
+	padding: 1%;
+	font-family: "Courier New"; 
+	font-weight: normal;
+}
+
+.options :hover {
+	color: #000;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+	opacity: 0.8;
+	font-size: 1.1em;
+	position: absolute;
+	bottom: 30px; 
+	font-weight: normal;
+}
+
+.options-menu p span {
+	margin-right: 10px;
+}
 
 /****************************************************************
  * SECTION - Gradient Backgrounds
